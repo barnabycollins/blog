@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to write a useful technical band rider"
-date:   2022-02-01 00:10:00 +0000
+date:   2022-02-01 18:25:00 +0000
 categories: admin
 ---
 
@@ -99,13 +99,16 @@ normal event at least) not be placed by technicians, but you should include:
 - Amplifiers
 - Any other static equipment you might be bringing yourselves (eg, IEM racks or
   pedalboards)
+- Places that need to be left unblocked for movement on stage (not strictly
+  necessary but possibly useful if your band moves around a lot)
 - Places where you need power - bonus points for
   - specifically marking out spots to leave extension leads
   - noting the number of plugs that will be required in each location
-- Places that need to be left unblocked for movement on stage (not strictly
-  necessary but possibly useful if your band moves around a lot)
+  - noting any power-hungry (>100W) devices that might need plugging in
+    (generally these are devices with speakers, but also may include computers,
+    large displays or heating appliances)
 
-You can also include items you expect technicians to provide, such as DIs or
+You can also depict items you expect technicians to provide, such as DIs or
 stageboxes, if you like - but it may be easier to leave positions of these items
 up to them as they probably know the space better than you do.
 
