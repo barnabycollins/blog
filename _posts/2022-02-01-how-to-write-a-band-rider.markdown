@@ -106,7 +106,7 @@ normal event at least) not be placed by technicians, but you should include:
   - noting the number of plugs that will be required in each location
   - noting any power-hungry (>100W) devices that might need plugging in
     (generally these are devices with speakers, but also may include computers,
-    large displays or heating appliances)
+    large displays, lights or heating appliances)
 
 You can also depict items you expect technicians to provide, such as DIs or
 stageboxes, if you like - but it may be easier to leave positions of these items
