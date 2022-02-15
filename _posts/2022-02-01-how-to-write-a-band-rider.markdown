@@ -41,6 +41,7 @@ items may include:
 - Tables & seating
 - Music stands
 - Mic stands (if you have specific needs in this area)
+- Power sockets (and what will need to be plugged into them)
 
 If you have preferences don't be afraid to state those too, but bear in mind
 that smaller-scale events and venues will only have limited tech selections.
