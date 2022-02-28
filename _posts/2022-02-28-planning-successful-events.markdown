@@ -92,7 +92,7 @@ desks and maybe some staging) will cost £200+.
 
 These numbers will also vary depending on how much your performers are
 bringing - a band that brings their own amplifiers and drumkit will obviously
-need less hire spend than on that doesn't. Remember also that you'll probably
+need less hire spend than one that doesn't. Remember also that you'll probably
 want at least one technician, and these should charge £15-30 per hour. Finally,
 while it may seem like needless spending to hire out nicer equipment that will
 only service your technicians and band (things like nicer mixers or more stage
