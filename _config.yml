@@ -23,7 +23,7 @@ email: hi@barnabycollins.com
 description: >- # this means to ignore newlines until the next thing
   A blog for sound engineers and people involved with events, intended to be a
   useful resource to make events run smoother! If you have any thoughts or
-  comments, please contact mewith the details below.
+  comments on any of the stuff on this blog, please get in touch :)
 lang: en-GB
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.barnabycollins.com"
