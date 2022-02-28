@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to plan a successful (and minimally stressful) live sound event"
+title:  "How to plan a successful (and minimally stressful) live event"
 date:   2022-02-28 10:27:00 +0000
 categories: admin
 ---
