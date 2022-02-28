@@ -86,16 +86,16 @@ against your budget. If you're not technically inclined, though, don't worry!
 It's still useful to think about how much you're willing to spend - as a guide
 (at Durham college hire prices), a 'basic' setup (with minimal lighting, 1-2
 main speakers, a mixer etc) will cost around £70 + VAT, a more advanced setup
-(with stage monitors, slightly more lighting and a digital mixer) will cost £150
-+ VAT and a really fancy setup (with posh lighting, nice light and sound desks
-and maybe some staging) will cost £200+.
+(with stage monitors, slightly more lighting and a digital mixer) will cost
+£150 + VAT and a really fancy setup (with posh lighting, nice light and sound
+desks and maybe some staging) will cost £200+.
 
-These numbers will also vary depending on how much your performers are bringing
-- a band that brings their own amplifiers and drumkit will obviously need less
-hire spend than on that doesn't. Remember also that you'll probably want at
-least one technician, and these should charge £15-30 per hour. Finally, while it
-may seem like needless spending to hire out nicer equipment that will only
-service your technicians and band (things like nicer mixers or more stage
+These numbers will also vary depending on how much your performers are
+bringing - a band that brings their own amplifiers and drumkit will obviously
+need less hire spend than on that doesn't. Remember also that you'll probably
+want at least one technician, and these should charge £15-30 per hour. Finally,
+while it may seem like needless spending to hire out nicer equipment that will
+only service your technicians and band (things like nicer mixers or more stage
 monitors) these things will allow those people to perform better: as an example,
 pricier digital mixers feature really handy features like compressors and
 wireless control that will allow a technician to really fine-tune the sound
