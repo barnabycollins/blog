@@ -15,16 +15,16 @@ first**, but I'll go into more detail on good processes to follow below!
 I should note that I am writing this from the perspective of a sound technician
 that has worked on a wide range of events at Durham University, so a lot of the
 specifics will be geared towards that niche, but the general process outlined
-here is applicable to more or less any event. Essentially, that your job as an
-event organiser is to act as a central party who communicates with all the
-involved stakeholders, collects all the information needed to run the event in
-one place and ensures everyone knows what's going on.
+here is applicable to more or less any event. Essentially, your job as an event
+organiser is to act as a central party who communicates with all the involved
+stakeholders, collects all the information needed to run the event in one place
+and ensures everyone knows what's going on.
 
 # Step 1: Establish what you have at the venue
 Probably the first step of planning an event is to decide on a venue. This could
 be anything from a small local bar to a literal castle, but what they all have
 in common is that they will provide you with a certain base level of equipment
-for your event, as well as obviously the room(s) that it will take place in. In
+for your event, as well as obviously the space(s) that it will take place in. In
 all likelihood, they will invite you to the location to have a look around, and
 this is the ideal time to discuss the first thing you need to know: what exactly
 they have. Bring a clipboard!
