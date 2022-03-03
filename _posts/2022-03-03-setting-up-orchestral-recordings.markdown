@@ -97,7 +97,7 @@ the SD card installed.
 
 If you're okay mixing your recordings yourself, import your recordings into a
 digital audio workstation; as a minimum I'd suggest you do the following:
-- Set a low-cut (or high-pass) filter at a minimum of 50 Hz to eliminate
+- Set a low-cut (aka high-pass) filter at a minimum of 50 Hz to eliminate
   unnecessary sub-bass frequencies
 - Pan your left and right signals all the way to their respective sides
 - Set the gain of all your signals so they peak at around -6 dB at the loudest
