@@ -18,6 +18,7 @@ Once the recorder is placed, you need to place your microphones.
 
 ## Case 1: XY Stereo
 > ![XY Stereo diagram](https://upload.wikimedia.org/wikipedia/commons/1/1d/XY_stereo.svg)
+> 
 > By Iainf 23:51, 21 September 2007 (UTC) - self-made; based on Image:XY-Stereo.png and
 > Image:Cardioidpattern.svg, CC BY-SA 3.0,
 > https://commons.wikimedia.org/w/index.php?curid=2792301
@@ -29,6 +30,7 @@ tweaked depending on how wide your ensemble is and/or how far away it is.
 
 ## Case 2: Decca Tree
 > ![Decca Tree diagram](https://upload.wikimedia.org/wikipedia/commons/4/48/Decca_Tree.svg)
+> 
 > By Iainf 00:30, 23 September 2007 (UTC) - public domain,
 > https://commons.wikimedia.org/wiki/File:Decca_Tree.svg
 
