@@ -8,6 +8,18 @@ categories: recording
 Once you know what setup you're using, setting up an orchestral recording is
 pretty straightforward.
 
+# Step 0: Making sure you have everything you need
+Here's a quick checklist of what you will want to bring:
+- Microphones
+- Microphone stands
+- Recording setup (probably just a portable recorder)
+- Means of getting mains power to your recorder (probably a USB charger)
+- Battery power for your recorder (just in case)
+- XLR cables
+- Wired headphones to monitor the signal
+- (Maybe) a laptop to retrieve the recordings
+- Cable covers and/or tape to avoid trip hazards
+
 # Step 1: Positioning everything
 Once all the equipment is in the venue, the first order of business is to figure
 out where you're going to put your recorder. You want it to be somewhere safe,
@@ -81,14 +93,14 @@ recorders but here's a quick checklist of things to do:
 - Set the gain, with the following process:
   - Ask the group to sing/play at maximum volume for around a minute
   - For each channel, adjust the volume until it's just maxing out at -10 dB
-- Plug in a pair of headphones if possible and monitor the signal to make sure
-  there aren't any issues
+- Plug in a pair of wired headphones if possible and monitor the signal to make
+  sure there aren't any issues
 
 # Step 4: Record
-Start your recording! If recording a concert, your best bet is probably just to
-set it off a minute before the concert starts. I'd suggest pausing the recording
-for any intervals etc as there's no point recording those, but don't do that if
-you're worried you'll forget to resume it again!
+Start your recording! If recording a concert, your best bet is probably to set
+it off just before the concert starts. I'd suggest pausing the recording for any
+intervals etc as there's no point recording those, but don't do that if you're
+worried you'll forget to resume it again!
 
 # Step 5: Edit
 Once you're done recording, grab your recordings off the SD card by either
