@@ -26,7 +26,12 @@ out where you're going to put your recorder. You want it to be somewhere safe,
 preferably with power so you don't have to rely on batteries, and in a spot that
 minimises trip hazards as well as being reasonably close to the microphones.
 
-Once the recorder is placed, you need to place your microphones.
+Once the recorder is placed, you need to place your microphones. When placing
+microphones, remember that you are essentially deciding where a listener's
+'ears' are going to end up when they hear the recording. As such, where you
+place them will greatly affect what the recording sounds like. Typically the
+best spot is just at the front of the ensemble (just behind the conductor, if
+applicable, is usually a good rule of thumb), and at least 2 metres in the air.
 
 ## Case 1: XY Stereo
 > ![XY Stereo diagram](https://upload.wikimedia.org/wikipedia/commons/1/1d/XY_stereo.svg)
