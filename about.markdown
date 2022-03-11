@@ -4,6 +4,10 @@ title: About
 permalink: /about/
 ---
 
+Welcome! This blog is a little bit of a work in progress at the moment; expect
+the layout and formatting to change substantially before I'm happy with it 👀
+
+{::comment}
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
 You can find the source code for Minima at GitHub:
@@ -16,3 +20,4 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
+{:/comment}

@@ -4,3 +4,6 @@
 
 layout: home
 ---
+
+Welcome! This blog is a little bit of a work in progress at the moment; expect
+the layout and formatting to change substantially before I'm happy with it 👀

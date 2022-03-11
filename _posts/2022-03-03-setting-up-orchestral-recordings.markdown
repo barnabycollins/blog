@@ -8,13 +8,30 @@ categories: recording
 Once you know what setup you're using, setting up an orchestral recording is
 pretty straightforward.
 
+# Step 0: Making sure you have everything you need
+Here's a quick checklist of what you will want to bring:
+- Microphones
+- Microphone stands
+- Recording setup (probably just a portable recorder)
+- Means of getting mains power to your recorder (probably a USB charger)
+- Battery power for your recorder (just in case)
+- XLR cables
+- Wired headphones to monitor the signal
+- (Maybe) a laptop to retrieve the recordings
+- Cable covers and/or tape to avoid trip hazards
+
 # Step 1: Positioning everything
 Once all the equipment is in the venue, the first order of business is to figure
 out where you're going to put your recorder. You want it to be somewhere safe,
 preferably with power so you don't have to rely on batteries, and in a spot that
 minimises trip hazards as well as being reasonably close to the microphones.
 
-Once the recorder is placed, you need to place your microphones.
+Once the recorder is placed, you need to place your microphones. When placing
+microphones, remember that you are essentially deciding where a listener's
+'ears' are going to end up when they hear the recording. As such, where you
+place them will greatly affect what the recording sounds like. Typically the
+best spot is just at the front of the ensemble (just behind the conductor, if
+applicable, is usually a good rule of thumb), and at least 2 metres in the air.
 
 ## Case 1: XY Stereo
 > ![XY Stereo diagram](https://upload.wikimedia.org/wikipedia/commons/1/1d/XY_stereo.svg)
@@ -81,14 +98,14 @@ recorders but here's a quick checklist of things to do:
 - Set the gain, with the following process:
   - Ask the group to sing/play at maximum volume for around a minute
   - For each channel, adjust the volume until it's just maxing out at -10 dB
-- Plug in a pair of headphones if possible and monitor the signal to make sure
-  there aren't any issues
+- Plug in a pair of wired headphones if possible and monitor the signal to make
+  sure there aren't any issues
 
 # Step 4: Record
-Start your recording! If recording a concert, your best bet is probably just to
-set it off a minute before the concert starts. I'd suggest pausing the recording
-for any intervals etc as there's no point recording those, but don't do that if
-you're worried you'll forget to resume it again!
+Start your recording! If recording a concert, your best bet is probably to set
+it off just before the concert starts. I'd suggest pausing the recording for any
+intervals etc as there's no point recording those, but don't do that if you're
+worried you'll forget to resume it again!
 
 # Step 5: Edit
 Once you're done recording, grab your recordings off the SD card by either
@@ -97,7 +114,7 @@ the SD card installed.
 
 If you're okay mixing your recordings yourself, import your recordings into a
 digital audio workstation; as a minimum I'd suggest you do the following:
-- Set a low-cut (or high-pass) filter at a minimum of 50 Hz to eliminate
+- Set a low-cut (aka high-pass) filter at a minimum of 50 Hz to eliminate
   unnecessary sub-bass frequencies
 - Pan your left and right signals all the way to their respective sides
 - Set the gain of all your signals so they peak at around -6 dB at the loudest
