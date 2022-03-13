@@ -142,10 +142,11 @@ Cons:
 
 ## Decca Tree
 Named after Decca Records, the British record label who invented it, the Decca
-Tree is not only a hugely popular choice in capturing orchestras but also can be
-used in a range of other applications, particularly choral recordings. It's
-based on an AB stereo technique, but with the addition of a centre mic to fill
-the hole in the centre, and positioned more centrally.
+Tree is not only a hugely popular choice in capturing orchestral groups but also
+can be used in a range of other applications, particularly choral recordings.
+It's based on an AB stereo technique, but with the addition of a centre mic to
+fill the hole in the centre, and positioned more centrally rather than being
+spaced across the front.
 
-This technique uses three omnidirectional mics, positioned in an isosceles
-triangle at the front of the ensemble.
+This technique uses three omnidirectional mics, positioned in a roughly
+equilateral triangle with about 2m side length, at the front of the group.
