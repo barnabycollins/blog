@@ -89,6 +89,7 @@ recorders but here's a quick checklist of things to do:
     run out of space on the recording screen
 - Make sure the recorder is receiving power so you're not relying on batteries
   - You might need to tell it to use the USB input for power when you turn it on
+    \- this might appear as a 'bus power' option
 - Set the recording settings - 48kHz WAV at 24-bit is generally a good bet!
 - Make sure phantom power is on; without this you won't get any signal from your
   mics!
