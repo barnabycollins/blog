@@ -39,10 +39,11 @@ So, a typical sound wave might look like this:
 
 <iframe src="https://www.desmos.com/calculator/2aeoaedz8u" style="min-height:200px" width="100%"></iframe>
 
-There are four things that define an analogue signal: its channel count, its
-level, the connector it uses, and whether or not it's balanced. Balanced audio
-is important in live music, but less important for DJs, so I'll talk about the
-first three now and skip balanced audio until the end of the article.
+There are five things that define a signal: its channel count, its level,
+whether it's analogue or digital, the connector it uses, and whether or not it's
+balanced. Balanced audio is important in live music, but less important for DJs,
+so I'll talk about the first four now and skip balanced audio until the end of
+the article.
 
 ## Audio channels
 
@@ -113,6 +114,35 @@ possible in the signal chain - so any mic/phono input on a mixer will naturally
 have a pre-amp built in behind the connectors. Line level inputs don't need
 pre-amps though, for obvious reasons.
 
+## Analogue vs digital
+
+So, we're familiar with analogue signals. Next up, digital signals. I won't go
+into too much details, but essentially a digital signal turns a sound system
+into a series of numbers rather than as a wiggly line on, say, a vinyl record.
+
+It checks what the signal's voltage is (or 'samples' it) several tens of
+thousands of times a second, and uses those numbers to describe the signal. A
+device playing back a digital signal simply joins the dots back up. You might
+think that the 'steppyness' of a digital signal would affect the sound, but a
+low-pass filter and some clever maths called the Nyquist–Shannon theorem
+actually means that a digital signal is capable of perfectly describing any
+analogue signal, provided that there is an upper limit on the frequencies we try
+to recreate. Humans are physically unable to hear frequencies above 20kHz, so
+this limitation is fine. Devices that convert between digital and analogue are
+called digital to analogue converters, or DACs - you'll never guess what an ADC
+does.
+
+In general, digital audio is better than analogue audio - it is immune to
+interference and capable of carrying multiple channels down a single cable.
+
+There is a separate analogue/digital discussion, unrelated to the audio signals
+that connect your devices together - that of analogue and digital DJ mixers.
+Analogue mixers such as Allen & Heath's Xone line are fully analogue, meaning
+that your audio signals travel through the whole mixer without any digital
+signal processing (DSP). However, the effects units in modern mixers use DSP -
+so these mixers do not include effects past EQ and filters (which can be easily
+recreated with analogue circuitry).
+
 ## Audio connectors
 
 You've probably noticed that there are several different ways of sending audio
@@ -136,6 +166,19 @@ particularly if you're using cheap plugs. Cheap RCA connectors with
 above) are bad, as they can be bent out of shape easily, resulting in a loose
 connection. Connectors with outer rings that fully surround the centre pin are a
 better pick if you have the choice.
+
+### S/PDIF (Digital RCA)
+
+<img src="/assets/images/spdif.jpg" height="80px">
+
+The digital connectors on CDJs and/or mixers use a protocol called S/PDIF to
+transmit digital audio through RCA cables. If your mixer and CDJs both support
+it, it's generally preferable as it minimises the number of conversions between
+analogue and digital that take place between your USB stick and the master
+output.
+
+In all physical aspects, digital RCA is identical to analogue RCA, so the cables
+are fully interchangeable.
 
 ### XLR
 
@@ -187,8 +230,11 @@ unit and/or mixer.
 
 Plugging TRS into a TS socket (or vice versa) won't break anything, particularly
 if the TRS part is balanced - it's pretty idiot proof. However, if you do happen
-to be using TRS for stereo instead of balanced audio, and you have issues, the
-cause may be that you've plugged TRS into TS somewhere.
+to be using TRS for stereo instead of balanced audio, and you have a missing
+channel, the cause may be that you've plugged TRS into TS somewhere.
+
+6.35mm cables' quality can be judged in the same way as XLR - if it feels solid,
+it's good. If it feels cheap and hollow, it's bad.
 
 # Advanced sound tech: phono signals
 
