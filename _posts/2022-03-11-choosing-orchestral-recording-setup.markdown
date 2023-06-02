@@ -127,7 +127,7 @@ also lose the centre of the group. This tradeoff is something that will always
 need to be overcome with AB stereo, hence its lack of use in orchestral
 recording. When recording a single instrument, it's much easier to be closer to
 the sound source, meaning the mics can pick up the centre easily without causing
-as much phasing.
+as much phase cancellation.
 
 Pros:
 - Simple to set up
