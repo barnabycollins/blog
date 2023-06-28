@@ -362,9 +362,13 @@ us two signals:
 
 <iframe src="https://www.desmos.com/calculator/tvghptgepg" style="min-height:400px" width="100%"></iframe>
 
-It then adds the two signals together, cancelling out the interference entirely.
+It then adds the two signals together...
 
-<iframe src="https://www.desmos.com/calculator/qzkmewx6h5" style="min-height:400px" width="100%"></iframe>
+<iframe src="https://www.desmos.com/calculator/qzkmewx6h5" style="min-height:200px" width="100%"></iframe>
+
+cancelling the interference out entirely:
+
+<iframe src="https://www.desmos.com/calculator/ctpukppvdc" style="min-height:200px" width="100%"></iframe>
 
 So, essentially, balanced audio adds a second signal (and therefore a third pole
 to the cable) and makes the signal travelling through that cable much more
