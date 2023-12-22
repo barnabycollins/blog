@@ -30,7 +30,12 @@ After building your Next.js server, you'll find that you have static assets in t
 
 The `static` directory contains a compiled version of everything inside your frontend codebase (including media files and client-side code). These are pretty straightforward to host - we can simply upload them somewhere, and tell Next.js where they live by providing it with the [`assetPrefix` configuration value](https://nextjs.org/docs/pages/api-reference/next-config-js/assetPrefix). Whatever you provide as the `assetPrefix` will be added to the start of any reference to your static assets in the HTML that your Next.js function returns. For example, if Next compiles some image to `/.next/static/myImage.jpg`, and you provide the `https://myhost.com` asset prefix, then any HTML that Next.js generates will refer to your image as `https://myhost.com/_next/static/myImage.jpg`.
 
-The `public` directory is a bit more tricky. The things we put in `public/` are generally things that we expect to find at the root of the URL. If we create some file at `public/robots.txt`, then we expect to find it at `https://myfrontend.com/robots.txt`. This creates a bit of a conflict with our Next.js server, because that also needs to live at the root of the frontend domain.
+The `public` directory is a bit more tricky. The things we put in `public/` are generally things that we expect to find at the root of the frontend host. If we create some file at `public/robots.txt`, then we expect to find it at `https://myfrontend.com/robots.txt`. This creates a bit of a conflict with our Next.js server, because that also needs to live at the root of the frontend domain.
+
+The best way to solve this is to:
+- Move everything that's only referred to by frontend code (ie, site media content) into the `src` directory (and thereby into `.next/static`)
+- Organise anything that remains and that doesn't need to live directly at the root into a small number of directories under the root
+- Create rules in the CDN for those directories, plus any files that do need to stay at the root
 
 ## Step 2: Hosting Next.js on Lambda
 
