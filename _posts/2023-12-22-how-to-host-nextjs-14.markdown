@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to host serverless Next.js 14+ in AWS (or other providers)"
+title:  "How to host serverless Next.js 14+ in AWS"
 date:   2023-12-22 13:48:00 +0000
 categories: web-dev
 ---
@@ -133,10 +133,10 @@ Adapter](https://github.com/awslabs/aws-lambda-web-adapter#aws-lambda-web-adapte
 When a user sends a request to your Next.js server, LWA does the following:
 
 - Launch your server if it's running in a fresh Lambda function
-- Wait for your server to respond to requests on the appropriate port
+- Poke your server until it responds to requests on the appropriate port
 - Once it gets a response from the server, turn the event back into an HTTP
   request and pass it into your server
-- Return the server's response back to the client
+- Return the server's response back to the service that invoked the function
 
 Lambda Web Adapter takes the form of a 'layer' that is applied on top of your
 function code. We therefore just need to apply the layer and configure it using
@@ -145,6 +145,14 @@ environment variables, and it will work nicely.
 This is obviously the most AWS-specific part of this process, but it is a common
 use case so I would imagine that most hosting providers will offer similar
 functionality.
+
+In terms of an entrypoint, Next.js outputs a `server.js` file that you can
+invoke with `node server.js` in order to execute the production server. The
+creators of Lambda Web Adapter provide a [shell
+script](https://github.com/awslabs/aws-lambda-web-adapter/blob/main/examples/nextjs-zip/app/run.sh)
+that you can use to actually launch the server.
+
+This script will need to be copied into the `.next/standalone/` directory before you compress and upload it to your function.
 
 ### Infrastructure
 
@@ -155,7 +163,7 @@ authorisation is needed.
 
 Here is a recommended list of resources that your function will need:
 
-- A CloudWatch log group with the name `/aws/lambda/${function-name}` (your
+- A CloudWatch log group with the name `/aws/lambda/[function-name]` (your
   function will write to this log group automatically)
 - An IAM role with the following:
   - [The AWS Lambda trust
@@ -166,7 +174,8 @@ Here is a recommended list of resources that your function will need:
     role](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSLambdaBasicExecutionRole.html)
     (allows your function to write logs to CloudWatch)
 - The Lambda function itself, with the following configuration:
-  - ZIP package upload
+  - ZIP package upload; just ZIP up your `.next/standalone/` directory
+  - Handler: Your launch script
   - Timeout and memory size of your choice (maybe start at 1024 MB memory and
     reduce until you start having issues)
   - Node.js runtime (I used `nodejs18.x` but use what makes sense to you)
@@ -178,18 +187,18 @@ Here is a recommended list of resources that your function will need:
   - Environment variables:
     - `AWS_LAMBDA_EXEC_WRAPPER`: `"/opt/bootstrap"`
       - required by LWA
-    - `PORT`: [some integer port of your choice]
+    - `PORT`: [some integer]
       - tells Next.js which port to host your application on - [avoid ports 9001
         and
         3000](https://github.com/awslabs/aws-lambda-web-adapter#configurations)
         as these are used by AWS services
-    - `AWS_LWA_PORT`: [some integer port of your choice]
+    - `AWS_LWA_PORT`: [some integer]
       - tells LWA what port to look for your server on; should be the same as
         your `PORT`
     - `RUST_LOG`: `"info"`
       - tells LWA what log level to use; change this if you need to
         troubleshoot. Possible values
-        [here](https://docs.rs/env_logger/0.10.1/env_logger/#enabling-logging)
+        [here](https://docs.rs/env_logger/0.10.1/env_logger/#enabling-logging).
 
 You can find more info on AWS LWA configuration
 [here](https://github.com/awslabs/aws-lambda-web-adapter#lambda-functions-packaged-as-zip-package-for-aws-managed-runtimes).
@@ -200,9 +209,9 @@ With your function configured, you should find that you can reach your function
 by copying its URL into your browser. If you've made your static assets bucket
 public and given the server a correct `assetPrefix` then you should even be able
 to see your frontend fully-formed at this stage. Make sure that you upload the
-same server build as the one that you took the static assets from - Next.js
-generates different file names on every build for cache busting purposes, so
-non-matching assets and server code will result in missing assets.
+same standalone server build as the one that you took the static assets from -
+Next.js generates different file names on every build for cache busting
+purposes, so non-matching assets and server code will result in missing assets.
 
 ## Step 3: Caching & Routing
 
@@ -235,7 +244,10 @@ to configure:
   policy, when applied, will tell CloudFront to forward URL query strings. We
   need this in order to receive query strings in our Next.js server.
 
-So, we need a CloudFront distribution with the following configuration:
+So, we need a CloudFront distribution with the following configuration. I assume
+your domain name is in AWS Route 53, but this is not a requirement - some
+Googling should yield you some advice on how to configure it if you're not using
+R53.
 
 - Alias: Your frontend domain
 - Price class: Choose the most appropriate one for your use case (list
@@ -243,9 +255,9 @@ So, we need a CloudFront distribution with the following configuration:
 - Certificate: Use an appropriate certificate here. It's possible to register a
   free public certificate with AWS Certificate Manager (ACM) - [docs
   here](https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html)
-  1. One origin pointed at the Next.js server's function URL.
 - Origins:
-  2. One origin pointed at the static aqssets bucket, using the OAC mentioned above.
+  1. One origin pointed at the Next.js server's function URL.
+  2. One origin pointed at the static assets bucket, using the OAC mentioned above.
   3. One origin pointed at the `/content/[commit-hash]/public` prefix in the
      static assets bucket, also using the OAC mentioned above.
     - This is needed in order to map the `public` directory to the root of our
@@ -265,6 +277,10 @@ easy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloud
 Otherwise, you can [create an alias
 record](https://stackoverflow.com/a/65028375), pointed at the correct CloudFront
 URL.
+
+Finally, make sure you've set the asset prefix on your Next.js function
+to use the correct path. This is briefly explained at the start of the static assets
+section above - but, in short, the value you provide should look like `https://myfrontend.com/content/[commit-hash]`.
 
 Once all this is configured and deployed, your frontend should be working! The
 last thing you might want to do is set up a serverless function or cronjob that
