@@ -278,9 +278,10 @@ Otherwise, you can [create an alias
 record](https://stackoverflow.com/a/65028375), pointed at the correct CloudFront
 URL.
 
-Finally, make sure you've set the asset prefix on your Next.js function
-to use the correct path. This is briefly explained at the start of the static assets
-section above - but, in short, the value you provide should look like `https://myfrontend.com/content/[commit-hash]`.
+Finally, make sure you've set the asset prefix on your Next.js function to use
+the correct path. This is briefly explained at the start of the static assets
+section above - but, in short, the value you provide should look like
+`https://myfrontend.com/content/[commit-hash]`.
 
 Once all this is configured and deployed, your frontend should be working! The
 last thing you might want to do is set up a serverless function or cronjob that
