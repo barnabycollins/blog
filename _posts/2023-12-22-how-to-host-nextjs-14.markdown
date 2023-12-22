@@ -32,10 +32,19 @@ The `static` directory contains a compiled version of everything inside your fro
 
 The `public` directory is a bit more tricky. The things we put in `public/` are generally things that we expect to find at the root of the frontend host. If we create some file at `public/robots.txt`, then we expect to find it at `https://myfrontend.com/robots.txt`. This creates a bit of a conflict with our Next.js server, because that also needs to live at the root of the frontend domain.
 
-The best way to solve this is to:
+The easiest way to handle this is to:
 - Move everything that's only referred to by frontend code (ie, site media content) into the `src` directory (and thereby into `.next/static`)
 - Organise anything that remains and that doesn't need to live directly at the root into a small number of directories under the root
-- Create rules in the CDN for those directories, plus any files that do need to stay at the root
+- Create rules in the CDN for those directories, plus any files that do need to stay at the root (`robots.txt`, favicon, etc)
+- Direct everything else to Next.js
+
+Configuring this will happen at the end though - for now we just need to get the static assets uploaded to the S3 bucket.
+
+The way I chose to do this was to copy `.next/static/` and `public/` to `/content/[commit-hash]/_next/static` and `/content/[commit-hash]/public` inside the bucket respectively. I chose this scheme because:
+
+- Using a common prefix (`/content/`) allows me to have a single, unchanging CDN rule for static assets
+- Using the commit hash in the path allows for different releases to be differentiated in the bucket (meaning the bucket can be tidied easily). The commit hash is easy to access in deploy jobs, and makes it easy to trace a set of assets back to a specific code state. It also would help with [cache busting](https://javascript.plainenglish.io/what-is-cache-busting-55366b3ac022), except that Next.js does that already.
+- Putting all assets for a particular release inside a single prefix also makes the bucket easy to manage and tidy.
 
 ## Step 2: Hosting Next.js on Lambda
 
