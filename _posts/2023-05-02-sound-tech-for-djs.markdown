@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sound tech basics for DJs"
-date:   2022-05-02 15:48:00 +0000
+date:   2023-05-02 15:48:00 +0000
 categories: live-events
 ---
 
