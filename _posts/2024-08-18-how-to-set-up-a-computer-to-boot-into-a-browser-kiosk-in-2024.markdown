@@ -19,6 +19,10 @@ indefinitely. In my case, the URL is
 on this project can be found in its [project
 documentation](https://github.com/barnabycollins/shop-window/blob/main/README.md).
 
+```
+TODO: GRUB, BIOS
+```
+
 # Step 1: Installing Ubuntu
 
 Ubuntu is a free operating system based on Linux. It's more lightweight,
@@ -270,6 +274,6 @@ Restart the computer. You should now find that the browser launches as expected!
 
 I stole bits and pieces for this article from the following places:
 
-- https://askubuntu.com/a/968265
-- https://spin.atomicobject.com/protecting-ubuntu-root-filesystem/
-- https://rex.writeas.com/use-overlay-filesystem-on-ubuntu
+- [https://askubuntu.com/a/968265](https://askubuntu.com/a/968265)
+- [https://spin.atomicobject.com/protecting-ubuntu-root-filesystem/](https://spin.atomicobject.com/protecting-ubuntu-root-filesystem/)
+- [https://rex.writeas.com/use-overlay-filesystem-on-ubuntu](https://rex.writeas.com/use-overlay-filesystem-on-ubuntu)
