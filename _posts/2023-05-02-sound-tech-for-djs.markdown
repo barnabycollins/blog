@@ -197,9 +197,9 @@ with the button plugs into outputs, and the lower 'male' connector plugs into
 inputs.
 
 XLR cables are expensive, but good quality cables are worth it for their
-reliability. Bad quality connectors are typically made of aluminium and feel
-light or hollow in the hand, whereas good quality connectors feel more solid and
-are made of steel. The above connectors are the good kind - the XLR standard was
+reliability. Bad quality connectors typically feel light or hollow in the hand,
+whereas good quality connectors feel more solid and are made with tougher
+materials. The above connectors are the good kind - the XLR standard was
 designed by Neutrik and their plugs are still generally thought to be the best.
 
 ### 6.35mm (1/4")
@@ -374,3 +374,14 @@ So, essentially, balanced audio adds a second signal (and therefore a third pole
 to the cable) and makes the signal travelling through that cable much more
 resilient to interference.
 
+### Building your own cables
+
+One of the huge benefits of pro audio cables is that they can be disassembled and
+re-soldered with relative ease. If you're skilled at soldering, or interested in
+giving it a go, it's usually cheaper to buy cable and connectors separately and
+construct your cables yourself. It also gives you the skills to repair almost all
+audio cable faults yourself, and is very rewarding.
+
+Most cables designed for pro audio (XLR, TRS, SpeakON, etc) can be disassembled in
+this way - usually by unscrewing the metal or plastic 'boot' at the rear of the
+connector.
