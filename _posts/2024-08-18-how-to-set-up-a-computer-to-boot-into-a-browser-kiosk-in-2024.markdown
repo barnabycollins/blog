@@ -214,7 +214,7 @@ booting and impose a 30-second timeout. If this isn't desirable for you, just do
 the following:
 
 - Edit `/etc/default/grub`.
-- On a new line that looks like `GRUB_TIMEOUT=0`, add
+- On a new line, below the line that looks like `GRUB_TIMEOUT=0`, add
   `GRUB_RECORDFAIL_TIMEOUT=$GRUB_TIMEOUT`.
 - Run `sudo update-grub`.
 
