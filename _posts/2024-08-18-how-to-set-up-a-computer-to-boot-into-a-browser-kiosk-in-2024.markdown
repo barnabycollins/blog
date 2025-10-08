@@ -203,7 +203,7 @@ To disable software updates, do the following:
 - Navigate to the 'Updates' tab.
 - Set 'Automatically check for updates' to 'Never'. This ensures that Ubuntu's
   Software Updater programme won't run unprompted.
-- Execute the command `sudo snap refresh --hold'`. This ensures that applications
+- Execute the command `sudo snap refresh --hold`. This ensures that applications
   installed with the `snap` system (including probably Firefox) won't be upgraded
   automatically.
 
