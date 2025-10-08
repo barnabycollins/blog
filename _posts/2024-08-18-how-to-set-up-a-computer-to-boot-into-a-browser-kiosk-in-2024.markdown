@@ -312,7 +312,9 @@ if in doubt give those a try.
 
 Look for a setting like 'Restore on AC', 'AC Power Loss' or 'After Power Loss'.
 It should give you a few options, like 'power off', 'restore previous state' or
-'power on'. Select 'power on', then save and exit the BIOS.
+'power on'. Select 'power on', then save and exit the BIOS. Your BIOS settings
+are stored separately to your Ubuntu operating system, so you don't need to
+disable `overlayroot` for your settings to apply.
 
 If you need help with accessing the BIOS or enabling boot on power on for your
 particular machine, the answer can often be found online through a quick web
