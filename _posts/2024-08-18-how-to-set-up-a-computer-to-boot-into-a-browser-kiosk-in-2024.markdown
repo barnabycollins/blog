@@ -218,7 +218,7 @@ the following:
   `GRUB_RECORDFAIL_TIMEOUT=$GRUB_TIMEOUT`.
 - Run `sudo update-grub`.
 
-## Step 5b: Actually enabling `overlayroot`
+## Step 5c: Actually enabling `overlayroot`
 
 We installed `overlayroot` in step 2, so all that is left to do is to enable it.
 There is an important caveat to understand when enabling it: both the benefit
