@@ -209,7 +209,7 @@ To disable software updates, do the following:
 
 ## Step 5b: Disabling `grub`'s recordfail timeout
 
-Enabling overlayroot often causes `grub`, Ubuntu's bootloader, to show itself when
+Enabling `overlayroot` often causes `grub`, Ubuntu's bootloader, to show itself when
 booting and impose a 30-second timeout. If this isn't desirable for you, just do
 the following:
 
