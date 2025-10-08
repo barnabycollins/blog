@@ -301,6 +301,23 @@ shop's kiosk machines aren't accessing anything particularly private or
 mission-critical, but you should evaluate this risk, minimise it as far as
 possible and implement an update schedule if necessary.
 
+# Step 6: Boot upon receiving power
+
+If you want to switch the computer on and off by applying mains power, either
+with a manual switch or with a mains timer, you need it to turn on when it
+receives power. This is usually a setting in the BIOS; to set it you need to
+turn on the computer and repeatedly press a button on an attached keyboard
+until the BIOS appears. Typical candidates include F1, F2, F12 and Delete so
+if in doubt give those a try.
+
+Look for a setting like 'Restore on AC', 'AC Power Loss' or 'After Power Loss'.
+It should give you a few options, like 'power off', 'restore previous state' or
+'power on'. Select 'power on', then save and exit the BIOS.
+
+If you need help with accessing the BIOS or enabling boot on power on for your
+particular machine, the answer can often be found online through a quick web
+search.
+
 # Sources
 
 I stole bits and pieces for this article from the following places:
