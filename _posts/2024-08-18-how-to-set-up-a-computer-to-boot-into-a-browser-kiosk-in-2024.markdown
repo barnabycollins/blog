@@ -19,10 +19,6 @@ indefinitely. In my case, the URL is
 on this project can be found in its [project
 documentation](https://github.com/barnabycollins/shop-window/blob/main/README.md).
 
-```
-TODO: GRUB, BIOS
-```
-
 # Step 1: Installing Ubuntu
 
 Ubuntu is a free operating system based on Linux. It's more lightweight,
@@ -148,7 +144,31 @@ command line. I chose not to do this, but you can enable it easily and there are
 many guides on how to do this elsewhere. Make sure to include your Ubuntu
 version when searching.
 
-# Step 4: Setting up a read-only file system using `overlayroot`
+# Step 4: Actually enabling the kiosk web browser
+
+Most modern browsers have a kiosk mode; I chose to use Firefox as it is what I
+use anyway and it comes pre-installed with Ubuntu.
+
+Enabling the browser is pretty simple - just open the "Startup Applications" app
+as before, and add a new entry. The command should be:
+
+```sh
+firefox -kiosk -private-window "https://your-url.com/whatever/something?cool"
+```
+
+The `kiosk` flag fullscreens the browser and makes it impossible to
+un-full-screen without using system shortcuts like Alt-F4, and the
+`-private-window` means the window will open in private mode (otherwise known as
+'incognito' in other browsers). You can omit these flags if they don't match
+what you're after.
+
+There's more information on kiosk mode in Firefox
+[here](https://support.mozilla.org/en-US/kb/firefox-enterprise-kiosk-mode).
+
+Restart the computer. You should now find that the browser launches as expected!
+
+
+# Step 5: Setting up a read-only file system using `overlayroot`
 
 If you plan to turn your kiosk on and off using a mains timer, or just turn it
 on and off at the plug, I'd suggest setting up your computer to use a read-only
@@ -165,6 +185,40 @@ unchanged copy of the file system as soon as it turns back on again.
 Essentially, it will ensure that you can connect and disconnect your kiosk
 computer's power supply however you like, without any risk of corrupting
 anything and causing it to fail to boot the next time.
+
+## Step 5a: Disabling software updates
+
+If you're using a read-only file system, chances are you will want to disable
+software updates. Otherwise, your computer will apply the same updates every
+time it turns on and then lose them when it's turned off again. Updates can also
+cause unwanted prompts to appear on the screen, such as 'restart this computer
+to update to blahblah'.
+
+Obviously, this presents a security risk, so you may wish to have a plan to
+periodically log into your machines and upgrade the software they are running.
+
+To disable software updates, do the following:
+
+- Launch the 'Software & Updates' application.
+- Navigate to the 'Updates' tab.
+- Set 'Automatically check for updates' to 'Never'. This ensures that Ubuntu's
+  Software Updater programme won't run unprompted.
+- Execute the command `sudo snap refresh --hold'`. This ensures that applications
+  installed with the `snap` system (including probably Firefox) won't be upgraded
+  automatically.
+
+## Step 5b: Disabling `grub`'s recordfail timeout
+
+Enabling overlayroot often causes `grub`, Ubuntu's bootloader, to show itself when
+booting and impose a 30-second timeout. If this isn't desirable for you, just do
+the following:
+
+- Edit `/etc/default/grub`.
+- On a new line that looks like `GRUB_TIMEOUT=0`, add
+  `GRUB_RECORDFAIL_TIMEOUT=$GRUB_TIMEOUT`.
+- Run `sudo update-grub`.
+
+## Step 5b: Actually enabling `overlayroot`
 
 We installed `overlayroot` in step 2, so all that is left to do is to enable it.
 There is an important caveat to understand when enabling it: both the benefit
@@ -247,29 +301,6 @@ shop's kiosk machines aren't accessing anything particularly private or
 mission-critical, but you should evaluate this risk, minimise it as far as
 possible and implement an update schedule if necessary.
 
-# Step 5: Actually enabling the kiosk web browser
-
-Most modern browsers have a kiosk mode; I chose to use Firefox as it is what I
-use anyway and it comes pre-installed with Ubuntu.
-
-Enabling the browser is pretty simple - just open the "Startup Applications" app
-as before, and add a new entry. The command should be:
-
-```sh
-firefox -kiosk -private-window "https://your-url.com/whatever/something?cool"
-```
-
-The `kiosk` flag fullscreens the browser and makes it impossible to
-un-full-screen without using system shortcuts like Alt-F4, and the
-`-private-window` means the window will open in private mode (otherwise known as
-'incognito' in other browsers). You can omit these flags if they don't match
-what you're after.
-
-There's more information on kiosk mode in Firefox
-[here](https://support.mozilla.org/en-US/kb/firefox-enterprise-kiosk-mode).
-
-Restart the computer. You should now find that the browser launches as expected!
-
 # Sources
 
 I stole bits and pieces for this article from the following places:
@@ -277,3 +308,4 @@ I stole bits and pieces for this article from the following places:
 - [https://askubuntu.com/a/968265](https://askubuntu.com/a/968265)
 - [https://spin.atomicobject.com/protecting-ubuntu-root-filesystem/](https://spin.atomicobject.com/protecting-ubuntu-root-filesystem/)
 - [https://rex.writeas.com/use-overlay-filesystem-on-ubuntu](https://rex.writeas.com/use-overlay-filesystem-on-ubuntu)
+- [https://askubuntu.com/questions/1046979](https://askubuntu.com/questions/1046979/overlayroot-and-grub2-grub-menu-always-shows)
