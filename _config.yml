@@ -18,8 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Barnaby Collins' Tech Blog
-email: hi@barnabycollins.com
+title: Barnaby Collins Blog
 description: Hello there # >- # this means to ignore newlines until the next thing
 #   A blog for sound engineers and people involved with events, intended to be a
 #   useful resource to make events run smoother! If you have any thoughts or
