@@ -73,7 +73,7 @@ and other stage-based acts, so make sure they get them sent over ASAP.
 Otherwise, you'll have to chase them for riders when your technician asks for
 them in a few days' time and you'll lose a day or two of planning time while
 they get back to you. If you need something to point to, I have a
-[handy blog post](https://blog.barnabycollins.com/admin/2022/02/01/how-to-write-a-band-rider.html)
+[handy blog post](/admin/2022/02/01/how-to-write-a-band-rider.html)
 on that very subject.
 
 # Step 3: Establish what you want
