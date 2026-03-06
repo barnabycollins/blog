@@ -14,9 +14,7 @@ The outcome of this guide should be a computer that boots straight into the
 Ubuntu desktop upon receiving power, hides the mouse cursor, and launches a
 fullscreen Firefox window pointed at your chosen URL. The computer will be safe
 to unplug thanks to a read-only file system, and will keep its screen on
-indefinitely. In my case, the URL is
-[window.barnabycollins.com](https://window.barnabycollins.com); more information
-on this project can be found in its [project
+indefinitely. More information on this project can be found in its [project
 documentation](https://github.com/barnabycollins/shop-window/blob/main/README.md).
 
 # Step 1: Installing Ubuntu
